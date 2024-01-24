@@ -1,3 +1,4 @@
+let title = document.querySelector('title');
 let locationTitle = document.querySelector('.location__title');
 let temp = document.querySelector('.temp');
 let statusS = document.querySelector('.status');
@@ -12,7 +13,7 @@ if (navigator.geolocation) {
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
 
-        const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${latitude},${longitude}?unitGroup=metric&key=KG74CYXJXMVQSAQYEQSHYBBMV&contentType=json`;
+        const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${latitude},${longitude}?unitGroup=metric&key=KG74CYXJXMVQSAQYEQSHYBBMV&contentType=json&lang=uk`;
 
         const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=2279ecb2e8704d3eb4f71fa0bdbe7461&language=en`;
 
@@ -21,6 +22,8 @@ if (navigator.geolocation) {
             .then(data => {
                 const city = data.results[0].components.city;
                 const country = data.results[0].components.country;
+
+                title.innerHTML = `${city}, ${country}`
                 locationTitle.innerHTML = `${city}, ${country}`
             })
             .catch(error => console.error("Error fetching data: " + error));
