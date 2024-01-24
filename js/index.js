@@ -3,6 +3,7 @@ let temp = document.querySelector('.temp');
 let statusS = document.querySelector('.status');
 let nightTemp = document.querySelector('.night');
 let dayTemp = document.querySelector('.day');
+let detailed = document.querySelector('.detailed');
 
 
 
@@ -35,6 +36,7 @@ if (navigator.geolocation) {
             statusS.innerHTML = `${r['currentConditions']['conditions']}`;
             nightTemp.innerHTML = `${Math.round(r['days'][0]['tempmin'])}°`;
             dayTemp.innerHTML = `${Math.round(r['days'][0]['tempmax'])}`;
+            detailed.innerHTML = `${r['days'][0]['description']}`;
 
         } else if (xhr.readyState === 4 && xhr.status !== 200) {
             console.error('Request failed with status:', xhr.status);
