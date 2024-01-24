@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <link rel="stylesheet" href="styles/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__item">
+            <box-icon name='menu-alt-left' color='#ffffff' class="header__icon" size="27.5px"></box-icon>
+        </div>
+        <div class="header__item">
+            <box-icon name='search' color='#ffffff' class="header__icon" size="27.5px"></box-icon>
+        </div>
+    </header>
+    <main class="main">
+        <div class="location__container">
+            <box-icon name='map' color='#A2A9A2' ></box-icon>
+            <h1 class="location__title">Lviv, Ukraine</h1>
+            <!-- | <span class="time__title">01 Jan 2024</span> -->
+        </div>
+        <div class="weather__container">
+            <div class="main__container">
+                <div class="temp__container">
+                    <h1 class="temp"></h1>
+                </div>
+                <div class="status__container">
+                    <p class="status">Sunny</p>
+                    <div class="d__n__container">
+                        <div class="d__n__item">
+                            <box-icon name='moon' color="#ffffff" size="25px"></box-icon>
+                            <p class="d__n__temp night">-5°</p>
+                        </div>
+                        <div class="d__n__item">
+                            <box-icon name='sun' color="#ffffff" size="25px"></box-icon>
+                            <p class="d__n__temp day">8°</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detailed__container">
+                <p class="detailed">Similar temperatures continuing with a chance of rain Friday & a chance of snow multiple days.</p>
+            </div>
+        </div>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>
