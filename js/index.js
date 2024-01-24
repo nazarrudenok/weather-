@@ -13,7 +13,7 @@ if (navigator.geolocation) {
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
 
-        const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${latitude},${longitude}?unitGroup=metric&key=KG74CYXJXMVQSAQYEQSHYBBMV&contentType=json&lang=uk`;
+        const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${latitude},${longitude}?unitGroup=metric&key=KG74CYXJXMVQSAQYEQSHYBBMV&contentType=json`;
 
         const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=2279ecb2e8704d3eb4f71fa0bdbe7461&language=en`;
 
